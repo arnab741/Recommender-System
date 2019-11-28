@@ -1,0 +1,85 @@
+{% extends 'home/index.html' %}
+{% load static%}
+{% block blocka %}
+<div class="flex-container" style="display:flex;flex-wrap:wrap;fex-direction:horizontal">
+  <div style="margin-left:13%;margin-top:8%"><img src="{{mobile.image.url}}" height="500px" width="400px"></div>
+  <div style="margin-top:4%;margin-left:4%">
+  <span style="font-weight:bold;font-size:40px;color:#F45C5D;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{mobile.name}}</span>
+  <br>
+  <br>
+  <div class="flex-container" style="display:flex;flex-wrap:nowrap;flex-direction:horizontal;">
+  <div style="font-size:24px;margin-left:1%"><B>Flipkart price : </B>Rs.{{flipkart.price}}
+  <br>
+  <span style="font-size:18px;color:blue"><B>{{flipkart.review_no}}</B> reviews, <B>{{flipkart.rating}}</B> rating</span>
+  <br>
+  <span style="font-size:18px;"><B>{{flipkart.delivery}}</B> delivery </span>
+  <br>
+  <span style="font-size:18px;"><B>Price drop probability -</B><br> Week : {{flipkart.week_p}}% <br> Month : {{flipkart.month_p}}% </span>
+  <br>
+  <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{flipkart.star1}}</i></span>
+  <br>
+  <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{flipkart.star2}}</i></i></span>
+  <br>
+  <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{flipkart.star3}}</i></i></i></span>
+  <br>
+  <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{flipkart.star4}}</i></i></i></i></span>
+  <br>
+  <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{flipkart.star5}}</i></i></i></i></span>
+  <br>
+  <span style="font-size:18px;color:blue"><B>Comments :</B> </span>
+  <br>
+  <span style="font-size:24px;"><B>Rank : {{order_2}}</B></span>
+</div>
+  <div style="font-size:24px;margin-left:1%"><B>Amazon price : </B>Rs.{{amazon.price}}
+  <br>
+  <span style="font-size:18px;color:blue"><B>{{amazon.review_no}}</B> reviews, <B>{{amazon.rating}}</B> rating</span>
+  <br>
+  <span style="font-size:18px;"><B>{{amazon.delivery}}</B> delivery </span>
+  <br>
+  <span style="font-size:18px;"><B>Price drop probability -</B><br> Week : {{amazon.week_p}}% <br> Month : {{amazon.month_p}}% </span>
+  <br>
+  <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{amazon.star1}}</i></span>
+  <br>
+  <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{amazon.star2}}</i></i></span>
+  <br>
+  <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{amazon.star3}}</i></i></i></span>
+  <br>
+  <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{amazon.star4}}</i></i></i></i></span>
+  <br>
+  <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{amazon.star5}}</i></i></i></i></span>
+  <br>
+  <span style="font-size:18px;color:blue"><B>Comments :</B> {{amazon.comments}}</span>
+  <br>
+   <span style="font-size:24px;"><B>Rank : {{order_1}}</B></span>
+   <br>
+</div>
+  <div style="font-size:24px;margin-left:1%"><B>Snapdeal price : </B>Rs.{{snapdeal.price}}
+    <br>
+    <span style="font-size:18px;color:blue"><B>{{snapdeal.review_no}}</B> reviews, <B>{{snapdeal.rating}}</B> rating</span>
+    <br>
+    <span style="font-size:18px;"><B>{{snapdeal.delivery}}</B> delivery </span>
+    <br>
+    <span style="font-size:18px;"><B>Price drop probability -</B><br> Week : {{snapdeal.week_p}}% <br> Month : {{snapdeal.month_p}}% </span>
+    <br>
+    <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{snapdeal.star1}}</i></span>
+    <br>
+    <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{snapdeal.star2}}</i></i></span>
+    <br>
+    <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{snapdeal.star3}}</i></i></i></span>
+    <br>
+    <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{snapdeal.star4}}</i></i></i></i></span>
+    <br>
+    <span style="font-size:18px;color:#F45C5D;"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"><i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{snapdeal.star5}}</i></i></i></i></span>
+    <br>
+    <span style="font-size:18px;color:blue"><B>Comments :</B> {{snapdeal.comments}}</span>
+    <br>
+     <span style="font-size:24px;"><B>Rank : {{order_3}}</B></span>
+   <br>
+  </div>
+</div>
+</div>
+</div>
+<div style="margin-left:10%;margin-top:7%">
+<img src="{{mobile.graph.url}}">
+</div>
+{% endblock %}
